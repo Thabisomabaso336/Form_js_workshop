@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Workshop</title>
+    <link rel="stylesheet" href="App.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header></header>
+      
+    <main id="root" class="container">
+       <section id="getName">
+    <input type="text" id="UserInput" placeholder="Enter your name" />
+<button onclick="setName()">Save</button>
+
+       
+      </section>
+
+      <span>Hello Thabani</span><br />
+      Would you like to Fill in my Form 😊? <br />
+      <button
+        class="btn btn-success"
+        onclick="document.getElementById('form-section').style.display='block'; document.getElementById('bye').style.display='none';"
+      >
+        yes
+      </button>
+      <button
+        class="btn btn-danger"
+        onclick="document.getElementById('form-section').style.display='none'; document.getElementById('bye').style.display='inline';"
+      >
+        no
+      </button>
+      <br />
+      <span id="bye" style="display: none"><h1>Thank you! bye 🖐️</h1></span>
+      <section id="form-section" style="display: none;">
+        <form id="myForm" onsubmit="start(event)" style="display: block">
+          <h1 class="text-center">Form JS Workshop</h1>
+          <label for="number" class="form-label m-4">Enter a Number</label>
+          <input
+            type="text"
+            id="num1"
+            name="num1"
+            class="form-control m-4 w-50"
+          />
+          <label for="number" class="form-label m-4">Enter your Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            class="form-control m-4 w-50"
+          />
+          <span
+            id="error-message"
+            class="span m-4"
+            style="background-color: rgb(124, 48, 61)"
+            hidden
+            >This is not a number</span
+          >
+          <br />
+          <span
+            id="emailMessage"
+            class="span m-4"
+            style="background-color: rgb(124, 48, 61)"
+            hidden
+            >This is invilid</span
+          >
+          <br />
+          <input class="form-btn m-4" type="submit" value="submit" />
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="App.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
